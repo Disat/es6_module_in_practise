@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- <script src="./src/index.js" type="module"></script> -->
+    <script type="module">
+
+        import SMErouter from './src/index.js'
+
+
+        // debugger
+        const router = new SMErouter('app')
+
+        router.route('/index', (req, res) => {
+            console.log(req);
+            console.log(res);
+            res.render("test")
+            console.log(res.render.toString())
+        })
+        console.log(router.route.toString())
+
+    </script>
+</body>
+
+</html>
